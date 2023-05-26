@@ -1,0 +1,250 @@
+:root {
+    --background-light: #b1af4b;
+    --background-white: #F6F5FF;
+    --text-dark: #0A0040;
+    --color-primary: #8b8a3a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik, sans-serif;
+    color: var(--text-dark);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-white);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100px;
+    background-color: var(--color-primary);
+}
+
+.sidebar img {
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+nav {
+    height: 100px;
+    background-color: var(--background-light);
+    width: calc(100vw - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 25px;
+}
+
+.btn {
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: 0.4s;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+a.btn {
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #48975f;
+    color: white;
+}
+
+main {
+    display: flex;
+    padding: 0px;
+}
+
+section.graph {
+    width: 33%;
+    height: 100%;
+    padding: 20px 20px 0 20px;
+}
+
+.graph-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2 {
+    display: inline-block;
+}
+
+.graph-header-line-header {
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 2px;
+}
+
+.graph-header-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.graph-header-date a {
+    text-decoration: none;
+    padding: 0 10px;
+    color: black;
+    font-size: 18px;
+}
+
+.graph-header-subtitle {
+    margin-top: 10px;
+}
+
+.list {
+    flex: 1;
+    padding: 20px 20px 0 20px;
+}
+
+.list-header {
+    display: flex;
+}
+
+.list-header-select {
+    background-color: transparent;
+    border: 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--background-light);
+    transition: 0.4s;
+}
+
+.task:hover {
+    background-color: var(--background-light);
+    cursor: pointer;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.title-text {
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.priority,
+.actions {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+}
+
+.sphere {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.actions a {
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.actions a:hover {
+    transform: scale(1.25);
+}
+
+#task-section {
+    margin: auto;
+    padding-top: 25px;
+}
+
+#task-section > h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.inputArea {
+    display: block;
+    margin: 10px;
+}
+
+.inputArea label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.inputArea > input, .inputArea > select {
+    height: 40px;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+.inputArea > input[type=checkbox] {
+    width: 20px;
+}
+
+.inputArea > textarea {
+    height: 120px;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 10px;
+}
+
+.inputArea > button {
+    margin-top: 20px;
+}
+
+.alert.alert-error {
+    text-align: center;
+    padding-bottom: 25px;
+    list-style-type: none;
+}
